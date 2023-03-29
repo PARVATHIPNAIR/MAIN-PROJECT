@@ -1,0 +1,54 @@
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">-->
+<!--<html xmlns="http://www.w3.org/1999/xhtml">-->
+
+{% extends 'adminindex.html' %}
+{% block body %}
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<form id="form3" name="form3" method="post" action="viewcomplaints1">
+  <table width="200" border="1"class="table table-hover">
+    <tr>
+      <th scope="row">Type</th>
+      <td><label>
+        <select name="select">
+          <option> </option>
+          <option value="Student">Student</option>
+          <option>Staff</option>
+          <option>Hostel</option>
+          <option>Others</option>
+        </select>
+        </label>      </td>
+      <td><label>
+          <div align="center">
+            <input type="submit" name="Submit" value="Search" />
+          </div>
+        </label>      </td>
+
+    </tr>
+    <tr>
+      <th scope="row">name</th>
+      <td>Complaints</td>
+      <td>Category</td>
+      <td>Date</td>
+      <td></td>
+
+
+    </tr>
+    {% for i in val %}
+    <tr>
+      <td>{{i['fname']}}</td>
+      <td>{{i['complaints']}}</td>
+      <td>{{i['category']}}</td>
+      <td>{{i['date']}}</td>
+      <td><a href="sendreply?id={{i['cid']}}">Reply</a></td>
+    </tr>
+    {% endfor %}
+  </table>
+</form>
+</body>
+<!--</html>-->
+{% endblock %}

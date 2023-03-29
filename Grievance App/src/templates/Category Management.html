@@ -1,0 +1,40 @@
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">-->
+<!--<html xmlns="http://www.w3.org/1999/xhtml">-->
+
+{% extends 'adminindex.html' %}
+{% block body %}
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<form id="form3" name="form3" method="post" action="addcategory#about">
+  <table width="200" border="1"class="table table-hover">
+    <tr>
+      <th colspan="3" scope="row"><strong>Category And Type Management </strong></th>
+    </tr>
+    <tr>
+      <th width="37" ><strong>Type</strong></th>
+      <th width="92">Categories</th>
+      <th width="39">&nbsp;</th>
+    </tr>
+    {% for i in val %}
+    <tr>
+      <th><strong>{{i['type']}}</strong></th>
+      <th>{{i['category']}}</th>
+      <th><a href="delete_category?id={{i['ctid']}}">Delete</a> </th>
+    </tr>
+    {% endfor %}
+    <tr>
+      <th colspan="3"><strong>
+        <label>
+        <input type="submit" name="Submit" value="Add" />
+        </label>
+      </strong></th>
+    </tr>
+  </table>
+</form>
+</body>
+<!--</html>-->
+{% endblock %}

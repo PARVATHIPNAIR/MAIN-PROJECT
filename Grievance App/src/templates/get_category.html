@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+        <select name="select2" class="form-control">
+            {% for i in data %}
+            <option value="{{ i['ctid'] }}">{{ i['category'] }}</option>
+            {% endfor %}
+        </select>
+</body>
+</html>

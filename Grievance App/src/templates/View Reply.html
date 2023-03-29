@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<form id="form1" name="form1" method="post" action="">
+  <table width="200" border="1"class="table table-hover">
+    <tr>
+      <th scope="col">CID</th>
+      <th scope="col">Complaint</th>
+      <th scope="col">Date</th>
+      <th scope="col">Reply</th>
+      <th scope="col">Status</th>
+      <th scope="col">Forword Status </th>
+    </tr>
+    {% for i in val %}
+    <tr>
+      <td>{{i['cid']}}</td>
+      <td>&nbsp;{{i['complaints']}}</td>
+      <td>{{i['date']}}</td>
+      <td>&nbsp;{{i['reply']}}</td>
+      <td>&nbsp;{{i['status']}}</td>
+      <td>&nbsp;{{i['forwordstatus']}}</td>
+    </tr>
+        {% endfor %}
+
+    <tr>
+      <center>
+        <td colspan="6"><a href="postComplaints">Add New Complaint</a> </td>
+      </center>
+    </tr>
+  </table>
+</form>
+</body>
+</html>

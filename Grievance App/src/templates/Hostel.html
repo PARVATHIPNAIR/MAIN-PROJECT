@@ -1,0 +1,51 @@
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">-->
+<!--<html xmlns="http://www.w3.org/1999/xhtml">-->
+
+{% extends 'adminindex.html' %}
+{% block body %}
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<form id="form1" name="form1" method="post" action="addHostel#about">
+  <table width="200" border="1"class="table table-hover">
+    <tr>
+      <th colspan="6" scope="col">HOSTEL MANAGEMENT </th>
+    </tr>
+    <tr>
+      <td>Name</td>
+      <td>Place</td>
+      <td>Pin</td>
+      <td>Post</td>
+      <td>Phone</td>
+      <td><p align="center"><a href="#"></a></p>
+          <p>
+            <label></label>
+        </p></td>
+    </tr>
+    {% for i in val %}
+  <tr>
+    <td> {{i['name']}}</td>
+    <td>{{i['place']}}</td>
+    <td>{{i['pin']}}</td>
+    <td>{{i['post']}}</td>
+    <td>{{i['phone']}}</td>
+    <td><p><a href="edit_Hostel?id={{i['lid']}}#about">Edit</a></p>
+      <p>
+    <p><a href="delete_Hostel?id={{i['lid']}}">delete</a></p>
+</td>
+  </tr>
+    {% endfor %}
+  <tr>
+    <td colspan="6"><label> </label>
+        <div align="center">
+          <input type="submit" name="Submit2" value="Add" />
+      </div></td>
+  </tr>
+  </table>
+</form>
+</body>
+<!--</html>-->
+{% endblock %}

@@ -1,0 +1,87 @@
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">-->
+<!--<html xmlns="http://www.w3.org/1999/xhtml">-->
+{% extends 'adminindex.html' %}
+{% block body %}
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<form id="form9" name="form9" method="post" action="editstudent1">
+  <table width="200" border="1"class="table table-hover">
+    <tr>
+      <th scope="row">First Name </th>
+      <td><label>
+        <input type="text" name="textfield" value="{{val['first name']}}"/>
+        </label>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Last Name </th>
+      <td><label>
+        <input type="text" name="textfield2" value="{{val['last name']}}" />
+        </label>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Age</th>
+      <td><label>
+        <input type="text" name="textfield3"value="{{val['Age']}}" />
+        </label>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Department</th>
+      <td><label>
+        <select name="select" value="{{val['department']}}">
+          <option>Others</option>
+          <option>Computer Science</option>
+          <option>EEE</option>
+          <option>Mechanics</option>
+          <option>IT</option>
+          <option>MCA</option>
+          <option>Mtech</option>
+          <option>MBA</option>
+        </select>
+        </label>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Year</th>
+      <td><label>
+        <select name="select2"value="{{val['year']}}">
+          <option>First Year</option>
+          <option>Second Year</option>
+          <option>Third Year</option>
+          <option>Fourth Year</option>
+        </select>
+        </label>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Email</th>
+      <td><label>
+        <input type="text" name="textfield4" value="{{val['email']}}" />
+        </label>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Phone</th>
+      <td><label>
+        <input type="text" name="textfield5" value="{{val['phone']}}" />
+        </label>
+      </td>
+    </tr>
+
+    <tr>
+      <th colspan="2" scope="row"> <label>
+        <input type="submit" name="Submit" value="Save" />
+        </label>
+      </th>
+    </tr>
+  </table>
+</form>
+</body>
+<!--</html>-->
+{% endblock %}

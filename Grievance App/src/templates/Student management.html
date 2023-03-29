@@ -1,0 +1,49 @@
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">-->
+<!--<html xmlns="http://www.w3.org/1999/xhtml">-->
+
+{% extends 'adminindex.html' %}
+{% block body %}
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<form id="form2" name="form2" method="post" action="addStudent#about">
+  <table width="200" border="1"class="table table-hover">
+    <tr>
+      <th colspan="7" scope="col">Student Management </th>
+    </tr>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Age</th>
+      <th scope="col">Department</th>
+      <th scope="col">Year</th>
+      <th scope="col">Email</th>
+      <th scope="col">Phone</th>
+      <th scope="col">&nbsp;</th>
+    </tr>
+    {% for i in val %}
+    <tr>
+      <td>{{i['first name']}} {{i['last name']}}</td>
+      <td>{{i['Age']}}&nbsp;</td>
+      <td>{{i['department']}}</td>
+      <td>{{i['year']}}</td>
+      <td>{{i['email']}}</td>
+      <td>{{i['phone']}}</td>
+      <td><p><a href="editstudent?id={{i['lid']}}#about">Edit</a></p>
+      <p><a href="delete_student?id={{i['lid']}}">Delete</a>
+      </p></td>
+    </tr>
+    {% endfor %}
+    <tr>
+      <td colspan="7"><label> </label>
+          <div align="center">
+            <input type="submit" name="Submit" value="Add" />
+        </div></td>
+    </tr>
+  </table>
+</form>
+</body>
+<!--</html>-->
+{% endblock %}
